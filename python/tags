@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/sifon/code/algorithms/python/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+Problem	environment/problem.py	/^class Problem(ABC):$/;"	c
+Solver	environment/solver.py	/^class Solver(ABC):$/;"	c
+TestCase	environment/problem.py	/^class TestCase:$/;"	c
+__init__	environment/problem.py	/^    def __init__(self, input_data, expected_output):$/;"	m	class:TestCase
+__init__	environment/problem.py	/^    def __init__(self, name, description, difficulty, test_cases):$/;"	m	class:Problem
+__init__	environment/solver.py	/^    def __init__(self, name):$/;"	m	class:Solver
+run_tests	environment/problem.py	/^    def run_tests(self):$/;"	m	class:Problem
+set_solver	environment/problem.py	/^    def set_solver(self, solver):$/;"	m	class:Problem
+solve	environment/solver.py	/^    def solve(self, problem):$/;"	m	class:Solver
