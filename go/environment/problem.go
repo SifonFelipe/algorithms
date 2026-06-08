@@ -1,6 +1,9 @@
 package environment
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 type TestCase struct {
 	InputData 	   map[string]any
@@ -13,7 +16,7 @@ type Problem struct {
 }
 
 func (p *Problem) RunTests(s Solver) {
-	fmt.Printf("Running tests for problem: %s\n", p.Name)
+	fmt.Printf("\nRunning tests for problem: %s\n", p.Name)
 
 	for i, testCase := range p.TestCases {
 		fmt.Printf("Test case %d: Input: %v\n", i+1, testCase.InputData)
@@ -21,7 +24,7 @@ func (p *Problem) RunTests(s Solver) {
 		output := s.Solve(testCase.InputData)
 		fmt.Printf("Output: %d\n", output)
 
-		if output == testCase.ExpectedOutput {
+		if reflect.DeepEqual(output, testCase.ExpectedOutput) {
 			fmt.Println("Result: PASS")
 		} else {
 			fmt.Printf("Result: FAIL (Expected: %v)\n", testCase.ExpectedOutput)
